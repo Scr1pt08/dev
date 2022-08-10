@@ -1,0 +1,14 @@
+thead {
+    border-bottom: 2px solid black;
+}
+
+th {
+    cursor: pointer;
+}
+
+form,
+.filter {
+    padding: 10px;
+    border: 2px solid rgb(175, 172, 172);
+    border-radius: 10px;
+}

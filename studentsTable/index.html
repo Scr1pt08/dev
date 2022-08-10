@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список студентов</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="module" defer src="/main.js"></script>
+</head>
+<body>
+    <section class="main">
+        <div class="container">
+            <h1>Список студентов</h1>
+            <h2 class="mb-3">Добавить студента</h2>
+            <form action="" id="add__student" class="mb-3">
+                <div class="mb-3">
+                    <input type="text" required class="add__student form-control" placeholder="Фамилия" id="input__surname">
+                </div>
+                <div class="mb-3">
+                    <input type="text" required class="add__student form-control" placeholder="Имя" id="input__name">
+                </div>
+                <div class="mb-3">
+                    <input type="text" required class="add__student form-control" placeholder="Отчество" id="input__lastname">
+                </div>
+                <div class="mb-3">
+                    <input type="date" required class="add__student form-control" placeholder="Дата рождения" min="1900-01-01" id="input__birthDate">
+                </div>
+                <div class="mb-3">
+                    <input type="text" required class="add__student form-control" placeholder="Факультет" id="input__faculty">
+                </div>
+                <div class="mb-3">
+                    <input type="number" required class="add__student form-control" placeholder="Начало обучения" id="input__studyDate" min="2000">
+                </div>
+                <button type="submit" class="btn btn-primary" id="button">Добавить</button>
+            </form>
+                <div class="filter mb-3">
+                    <h2>Фильтр студентов</h2>
+                    <div class="mb-3">
+                        <input data-filter="FIO" type="text" class="filter__student form-control" placeholder="ФИО" id="filter__fio">
+                    </div>
+                    <div class="mb-3">
+                        <input data-filter="Faculty" type="text" class="filter__student form-control" placeholder="Факультет" id="filter__faculty">
+                    </div>
+                    <div class="mb-3">
+                        <input data-filter="startStudyAge" type="number" class="filter__student form-control" placeholder="Начало обучения" id="filter__startStudyAge">
+                    </div>
+                    <div class="mb-3">
+                        <input data-filter="endStudyAge" type="number" class="filter__student form-control" placeholder="Конец обучения" id="filter__endStudyAge">
+                    </div>
+                </div>
+            <table class="table table-striped">
+                <thead>
+                    <th data-column="FIO">ФИО</th>
+                    <th data-column="Faculty">Факультет</th>
+                    <th data-column="BirthDate">ДР</th>
+                    <th data-column="StudyDate">Годы обучения</th>
+                </thead>
+                <tbody id="student__list">
+                </tbody>
+            </table>
+        </div>
+    </section>
+</body>
+</html>
